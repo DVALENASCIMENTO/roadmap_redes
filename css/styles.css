@@ -1,0 +1,110 @@
+body {
+    margin: 0; /* Define margem zero em todas as direções para o corpo da página */
+    padding: 0; /* Define padding zero em todas as direções para o corpo da página */
+    font-family: Arial, sans-serif; /* Define a família de fontes a ser usada para o texto na página */
+    background: linear-gradient(to bottom right, #000000, #333333); /* Cria um plano de fundo com gradiente linear de preto para cinza escuro */
+    color: #ffffff; /* Define a cor do texto como branco */
+}
+
+.container {
+    max-width: 800px; /* Define a largura máxima do container como 800 pixels */
+    margin: 0 auto; /* Centraliza o container horizontalmente na página */
+    padding: 20px; /* Adiciona espaço interno de 20 pixels dentro do container */
+    box-sizing: border-box; /* Faz com que o preenchimento e a borda não afetem a largura do container */
+}
+
+header {
+    text-align: center; /* Centraliza o conteúdo dentro do cabeçalho */
+    margin-bottom: 20px; /* Adiciona espaço abaixo do cabeçalho */
+}
+
+h1 {
+    font-size: 3em; /* Define o tamanho da fonte do título principal como 3 vezes o tamanho padrão */
+    margin-bottom: 0.2em; /* Adiciona um pequeno espaço abaixo do título principal */
+    animation: slideIn 1s ease; /* Aplica uma animação de deslize no título principal */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%); /* Inicia a animação deslocando o título para cima */
+    }
+    to {
+        transform: translateY(0); /* Conclui a animação reposicionando o título para sua posição final */
+}
+}
+
+h2 {
+    font-size: 1.5em; /* Define o tamanho da fonte do subtítulo como 1.5 vezes o tamanho padrão */
+    margin-top: 0; /* Remove o espaço superior do subtítulo */
+    margin-bottom: 1em; /* Adiciona espaço inferior ao subtítulo */
+}
+
+.content {
+    background-color: rgba(255, 255, 255, 0.1); /* Define uma cor de fundo com transparência para o conteúdo */
+    padding: 20px; /* Adiciona espaço interno de 20 pixels ao conteúdo */
+    border-radius: 8px; /* Adiciona cantos arredondados ao conteúdo */
+}
+
+.content p {
+    line-height: 1.5; /* Define a altura da linha do parágrafo como 1.5 vezes o tamanho da fonte */
+}
+
+.popup-link {
+    color: #eac11f; /* Define a cor do link para popups como amarelo */
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-weight: bold; /* Define a espessura da fonte como negrito */
+    transition: color 0.3s ease; /* Adiciona uma transição suave para a mudança de cor do link */
+}
+
+.popup-link:hover {
+    color: #ffea00; /* Altera a cor do link para amarelo claro quando o mouse passa por cima */
+}
+
+.overlay {
+    display: none; /* Oculta a camada de sobreposição inicialmente */
+    position: fixed; /* Posiciona a camada de sobreposição em relação à janela de visualização */
+    top: 0; /* Alinha a camada de sobreposição no topo da janela */
+    left: 0; /* Alinha a camada de sobreposição à esquerda da janela */
+    width: 100%; /* Define a largura da camada de sobreposição como 100% da largura da janela */
+    height: 100%; /* Define a altura da camada de sobreposição como 100% da altura da janela */
+    background-color: rgba(0, 0, 0, 0.7); /* Define a cor de fundo da camada de sobreposição como preto com 70% de transparência */
+    z-index: 999; /* Define a ordem de empilhamento da camada de sobreposição */
+    overflow: hidden; /* Oculta o conteúdo que excede os limites da camada de sobreposição */
+    display: flex; /* Usa um layout flexível para posicionar elementos dentro da camada de sobreposição */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente na camada de sobreposição */
+    align-items: center; /* Centraliza o conteúdo verticalmente na camada de sobreposição */
+}
+
+.popup {
+    position: relative; /* Define a posição do popup como relativa ao elemento pai */
+    max-width: 80%; /* Define a largura máxima do popup como 80% */
+    max-height: 80%; /* Define a altura máxima do popup como 80% */
+    padding: 20px; /* Adiciona espaço interno de 20 pixels ao popup */
+    background-color: #ffffff; /* Define a cor de fundo do popup como branco */
+    border-radius: 8px; /* Adiciona cantos arredondados ao popup */
+    text-align: center; /* Centraliza o conteúdo do popup */
+    overflow: auto; /* Adiciona rolagem ao conteúdo do popup, se necessário */
+}
+
+#popup-image {
+    max-width: 100%; /* Define a largura máxima da imagem popup como 100% */
+    max-height: 100%; /* Define a altura máxima da imagem popup como 100% */
+    border-radius: 8px; /* Adiciona cantos arredondados à imagem popup */
+}
+
+#close-btn {
+    position: absolute; /* Define a posição do botão de fechar como absoluta em relação ao elemento pai */
+    top: 10px; /* Define a distância do topo para o botão de fechar como 10 pixels */
+    right: 10px; /* Define a distância da direita para o botão de fechar como 10 pixels */
+    padding: 8px 16px; /* Adiciona preenchimento interno ao botão de fechar */
+    background-color: #f0c419; /* Define a cor de fundo do botão de fechar como amarelo */
+    color: #000000; /* Define a cor do texto do botão de fechar como preto */
+    border: none; /* Remove a borda do botão de fechar */
+    border-radius: 4px; /* Adiciona cantos arredondados ao botão de fechar */
+    cursor: pointer; /* Altera o cursor para indicar interação com o botão */
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave para a mudança de cor de fundo do botão */
+}
+
+#close-btn:hover {
+    background-color: #ffea00; /* Altera a cor de fundo do botão de fechar para amarelo claro ao passar o mouse */
+}
